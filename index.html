@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loanstreet</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/043ddb101a.js"></script>
+</head>
+
+<body>
+	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+            	<h1>Deals</h1>
+                <table id="dealTable" class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th id="sortInst" class="sort" title="click here to sort" scope="col">Institution <i class="fa-solid fa-sort"></i></th>
+                            <th id="sortDeal" class="sort" title="click here to sort" scope="col">Deal Type <i  class="fa-solid fa-sort"></i></th>
+                            <th id="sortType" class="sort" title="click here to sort" scope="col">Deal Size <i class="fa-solid fa-sort"></i></th>
+                            <th id="sortPub" class="sort" title="click here to sort" scope="col">Is it Published? <i class="fa-solid fa-sort"></i></th>
+                            <th scope="col">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="dealRow" role="row">
+                            <td scope="row">LS Credit Union</td>
+                            <td>Consumer Auto</td>
+                            <td>$1,000,000</td>
+                            <td>YES</td>
+                            <td><button tabindex="0" class="deleteBtn">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4" id="#content">
+                
+                    <form aria-label="Add Deal information" id="dealForm" onsubmit="return false" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="InputInstitution" class="form-label" aria-label=" Institution Name">Institution</label>
+                            <input type="text" class="form-control" id="InputInstitution" required>
+                            <div class="invalid-feedback">
+                                Institution name required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="typeInput" class="form-label" aria-label="Deal Type">Deal Type</label>
+                            <input type="text" class="form-control" id="typeInput" required>
+                            <div class="invalid-feedback">
+                                Deal type required
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dealInput" class="form-label" aria-label="Deal Size">Deal Size</label>
+                            <input type="text" class="form-control" id="dealInput" required>
+                            <div class="invalid-feedback">
+                                Deal Size required
+                            </div>
+                        </div>
+                        <button id="createDeal" type="submit" class="btn btn-primary">Create Deal</button>
+                    </form>
+               
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
